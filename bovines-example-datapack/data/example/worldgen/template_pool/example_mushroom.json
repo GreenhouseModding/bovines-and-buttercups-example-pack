@@ -31,5 +31,5 @@
       }
     }
   ],
-  "fallback": "example:example_mushroom"
+  "fallback": "minecraft:empty"
 }
