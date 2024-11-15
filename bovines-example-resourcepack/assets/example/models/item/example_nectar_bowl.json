@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "bovinesandbuttercups:item/example_nectar_bowl"
+    "layer0": "example:item/example_nectar_bowl"
   }
 }
