@@ -1,0 +1,89 @@
+{
+    "type": "bovinesandbuttercups:mooshroom",
+    "mushroom": {
+        "block_state": {
+            "Name": "minecraft:crimson_fungus"
+        }
+    },
+    "can_eat_flowers": true,
+    "texture_location": "example:bovinesandbuttercups/mooshroom/example",
+    "layers": [
+        {
+            "texture_location": "example:bovinesandbuttercups/example_layer",
+            "texture_modifiers": [
+                {
+                    "type": "bovinesandbuttercups:fallback"
+                }
+            ]
+        },
+        {
+            "texture_location": "example:bovinesandbuttercups/example_layer",
+            "texture_modifiers": [
+                {
+                    "type": "bovinesandbuttercups:conditioned",
+                    "id": "example:conditioned_modifier",
+                    "condition": [
+                        {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "biomes": "minecraft:crimson_forest"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "bovinesandbuttercups:emissive"
+                }
+            ]
+        }
+    ],
+    "natural_spawns": [
+        "#minecraft:is_nether",
+        {
+            "biomes": "minecraft:crimson_forest",
+            "weight": 5
+        }
+    ],
+    "thunder_conversion_types": [
+        "bovinesandbuttercups:brown_mushroom",
+        {
+            "type": "bovinesandbuttercups:red_mushroom",
+            "weight": 7
+        }
+    ],
+    "offspring_conditions": {
+        "this_conditions": [
+            {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "type": "bovinesandbuttercups:moobloom",
+                    "type_specific": {
+                        "type": "bovinesandbuttercups:cow",
+                        "cow_type": "bovinesandbuttercups:red_mushroom"
+                    }
+                }
+            }
+        ],
+        "other_conditions": [
+            {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "type": "bovinesandbuttercups:moobloom",
+                    "type_specific": {
+                        "type": "bovinesandbuttercups:cow",
+                        "cow_type": "bovinesandbuttercups:brown_mushroom"
+                    }
+                }
+            }
+        ]
+    },
+    "particle": {
+        "type": "bovinesandbuttercups:shroom",
+        "color": 11337549
+    }
+}

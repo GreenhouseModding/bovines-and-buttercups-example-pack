@@ -1,0 +1,8 @@
+{
+    "type": "bovinesandbuttercups:potted_flower",
+    "variants": {
+      "": {
+        "model": "example:block/potted_example_flower"
+      }
+    }
+  }

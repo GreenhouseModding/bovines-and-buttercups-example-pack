@@ -1,0 +1,44 @@
+{
+    "type": "bovinesandbuttercups:moobloom",
+    "flower": {
+        "custom_flower": "example:example_flower"
+    },
+    "bud": {
+        "model_set": "example:example_flower_bud"
+    },
+    "texture_location": "bovinesandbuttercups:bovinesandbuttercups/moobloom/snowdrop_moobloom",
+    "layers": [
+    {
+      "texture_location": "bovinesandbuttercups:bovinesandbuttercups/moobloom/moobloom_grass_layer",
+      "texture_modifiers": [
+        {
+          "type": "bovinesandbuttercups:grass_tint"
+        },
+        {
+          "type": "bovinesandbuttercups:fallback"
+        }
+      ]
+    },
+    {
+      "texture_location": "bovinesandbuttercups:bovinesandbuttercups/snow_layer",
+      "texture_modifiers": [
+        {
+          "type": "bovinesandbuttercups:conditioned",
+          "condition": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "bovinesandbuttercups:cow",
+                  "has_snow": true
+                }
+              }
+            }
+          ],
+          "id": "bovinesandbuttercups:snow_layer_with_snow"
+        }
+      ]
+    }
+  ]
+}

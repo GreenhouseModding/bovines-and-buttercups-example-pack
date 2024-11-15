@@ -1,0 +1,12 @@
+{
+    "stew_effects": [
+      {
+        "id": "minecraft:fire_resistance",
+        "duration": 80
+      },
+      {
+        "id": "minecraft:water_breathing",
+        "duration": 160
+      }
+    ]
+}

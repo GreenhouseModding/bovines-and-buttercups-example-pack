@@ -1,0 +1,9 @@
+{
+    "type": "bovinesandbuttercups:mushroom",
+    "variants": {
+      "": {
+        "model": "example:block/example_mushroom"
+      }
+    },
+    "item_model": "example:example_mushroom"
+  }

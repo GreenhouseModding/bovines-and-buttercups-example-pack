@@ -1,0 +1,105 @@
+{
+    "type": "bovinesandbuttercups:moobloom",
+    "flower": {
+        "block_state": {
+            "Name": "minecraft:bamboo",
+            "Properties": {
+                "age": 1,
+                "leaves": "small"
+            }
+        }
+    },
+    "bud": {
+        "block_state": {
+            "Name": "minecraft:bamboo_sapling"
+        }
+    },
+    "texture_location": "example:bovinesandbuttercups/moobloom/example",
+    "layers": [
+        {
+            "texture_location": "bovinesandbuttercups:bovinesandbuttercups/moobloom/moobloom_grass_layer",
+            "texture_modifiers": [
+                {
+                    "type": "bovinesandbuttercups:fallback"
+                },
+                {
+                    "type": "bovinesandbuttercups:grass_tint"
+                }
+            ]
+        },
+        {
+            "texture_location": "bovinesandbuttercups:bovinesandbuttercups/moobloom/moobloom_grass_layer",
+            "texture_modifiers": [
+                {
+                    "type": "bovinesandbuttercups:conditioned",
+                    "id": "example:conditioned_modifier",
+                    "condition": [
+                        {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "biomes": "#minecraft:is_jungle"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "bovinesandbuttercups:grass_tint"
+                },
+                {
+                    "type": "bovinesandbuttercups:emissive"
+                }
+            ]
+        }
+    ],
+    "natural_spawns": [
+        "#minecraft:is_jungle",
+        {
+            "biomes": "minecraft:bamboo_jungle",
+            "weight": 5
+        }
+    ],
+    "thunder_conversion_types": [
+        "bovinesandbuttercups:tropical_blue",
+        {
+            "type": "bovinesandbuttercups:chargelily",
+            "weight": 7
+        }
+    ],
+    "offspring_conditions": {
+        "this_conditions": [
+            {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "type": "bovinesandbuttercups:moobloom",
+                    "type_specific": {
+                        "type": "bovinesandbuttercups:cow",
+                        "cow_type": "bovinesandbuttercups:tropical_blue"
+                    }
+                }
+            }
+        ],
+        "other_conditions": [
+            {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "type": "bovinesandbuttercups:moobloom",
+                    "type_specific": {
+                        "type": "bovinesandbuttercups:cow",
+                        "cow_type": "bovinesandbuttercups:limelight"
+                    }
+                }
+            }
+        ],
+        "inheritance": "other_to_previous"
+    },
+    "nectar": "example:example_nectar",
+    "particle": {
+        "type": "bovinesandbuttercups:bloom",
+        "color": 11337549
+    }
+}

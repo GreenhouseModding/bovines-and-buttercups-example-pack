@@ -1,0 +1,8 @@
+{
+    "type": "bovinesandbuttercups:potted_mushroom",
+    "variants": {
+      "": {
+        "model": "example:block/potted_example_mushroom"
+      }
+    }
+  }

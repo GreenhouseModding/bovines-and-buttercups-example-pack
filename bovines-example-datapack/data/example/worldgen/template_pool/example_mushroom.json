@@ -1,0 +1,35 @@
+{
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "example:example_mushroom_large",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "override_liquid_settings": "apply_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "example:example_mushroom_medium",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "override_liquid_settings": "apply_waterlogging"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "example:example_mushroom_small",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "override_liquid_settings": "apply_waterlogging"
+      }
+    }
+  ],
+  "fallback": "example:example_mushroom"
+}
