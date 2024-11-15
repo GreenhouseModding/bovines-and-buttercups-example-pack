@@ -34,27 +34,6 @@
                     "id": "bovinesandbuttercups:snow_layer_with_snow"
                 }
             ]
-        },
-        {
-            "texture_location": "bovinesandbuttercups:bovinesandbuttercups/snow_layer",
-            "texture_modifiers": [
-                {
-                    "type": "bovinesandbuttercups:conditioned",
-                    "condition": [
-                        {
-                            "condition": "minecraft:entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "type_specific": {
-                                    "type": "bovinesandbuttercups:cow",
-                                    "has_snow": true
-                                }
-                            }
-                        }
-                    ],
-                    "id": "bovinesandbuttercups:snow_layer_with_snow"
-                }
-            ]
         }
     ]
 }
