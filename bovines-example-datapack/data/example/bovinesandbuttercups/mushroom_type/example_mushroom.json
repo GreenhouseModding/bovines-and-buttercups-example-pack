@@ -1,4 +1,3 @@
 {
-    "huge_structures": "example:example_mushroom",
-    "randomly_rotate_huge_structure": true
+    "huge_structures": "example:example_mushroom"
 }
