@@ -1,0 +1,29 @@
+{
+  "description": {
+    "color": "#557F12",
+    "translate": "flower_crown_material.example.example_flower_crown_material"
+  },
+  "ingredient": {
+    "id": "minecraft:bamboo"
+  },
+  "equipped_textures": {
+    "bottom": "bovinesandbuttercups:bovinesandbuttercups/flower_crown/models/bottom_example_flower_crown_material",
+    "bottom_left": "bovinesandbuttercups:bovinesandbuttercups/flower_crown/models/bottom_left_example_flower_crown_material",
+    "bottom_right": "bovinesandbuttercups:bovinesandbuttercups/flower_crown/models/bottom_right_example_flower_crown_material",
+    "center_left": "bovinesandbuttercups:bovinesandbuttercups/flower_crown/models/center_left_example_flower_crown_material",
+    "center_right": "bovinesandbuttercups:bovinesandbuttercups/flower_crown/models/center_right_example_flower_crown_material",
+    "top": "bovinesandbuttercups:bovinesandbuttercups/flower_crown/models/top_example_flower_crown_material",
+    "top_left": "bovinesandbuttercups:bovinesandbuttercups/flower_crown/models/top_left_example_flower_crown_material",
+    "top_right": "bovinesandbuttercups:bovinesandbuttercups/flower_crown/models/top_right_example_flower_crown_material"
+  },
+  "item_textures": {
+    "bottom": "bovinesandbuttercups:bovinesandbuttercups/flower_crown/items/bottom_example_flower_crown_material",
+    "bottom_left": "bovinesandbuttercups:bovinesandbuttercups/flower_crown/items/bottom_left_example_flower_crown_material",
+    "bottom_right": "bovinesandbuttercups:bovinesandbuttercups/flower_crown/items/bottom_right_example_flower_crown_material",
+    "center_left": "bovinesandbuttercups:bovinesandbuttercups/flower_crown/items/center_left_example_flower_crown_material",
+    "center_right": "bovinesandbuttercups:bovinesandbuttercups/flower_crown/items/center_right_example_flower_crown_material",
+    "top": "bovinesandbuttercups:bovinesandbuttercups/flower_crown/items/top_example_flower_crown_material",
+    "top_left": "bovinesandbuttercups:bovinesandbuttercups/flower_crown/items/top_left_example_flower_crown_material",
+    "top_right": "bovinesandbuttercups:bovinesandbuttercups/flower_crown/items/top_right_example_flower_crown_material"
+  }
+}

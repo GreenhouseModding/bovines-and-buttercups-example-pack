@@ -1,7 +1,3 @@
 {
-    "block.example.example_flower": "Example Flower",
-    "block.example.potted_example_flower": "Potted Example Flower",
-    "block.example.example_mushroom": "Example Mushroom",
-    "block.example.example_mushroom_block": "Example Mushroom Block",
-    "block.example.potted_example_mushroom": "Potted Example Mushroom"
+    "flower_crown_material.example.example_flower_crown_material": "Bamboo Leaf"
 }
