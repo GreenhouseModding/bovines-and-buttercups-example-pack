@@ -23,7 +23,7 @@ Cow Types are defined in the `/data/<namespace>/bovinesandbuttercups/cow_type` d
 <details>
 <summary>bovinesandbuttercups:moobloom</summary>
 
-```json
+```jsonc
 {
     "type": "bovinesandbuttercups:moobloom",
     // Defines the flower that is associated with the adult moobloom.
@@ -175,7 +175,7 @@ Cow Types are defined in the `/data/<namespace>/bovinesandbuttercups/cow_type` d
 <details>
 <summary>bovinesandbuttercups:mooshroom</summary>
 
-```json
+```jsonc
 {
     "type": "bovinesandbuttercups:mooshroom",
     // Defines the flower that is associated with the adult mooshroom.
@@ -322,7 +322,7 @@ Nectars are defined in the `/data/<namespace>/bovinesandbuttercups/nectar` direc
 
 <details>
 
-```json
+```jsonc
 {
     // A list of effects to apply lockdown for.
     // Accepts an 'id' field and a 'duration' field.
@@ -349,7 +349,7 @@ Nectars are defined in the `/data/<namespace>/bovinesandbuttercups/nectar` direc
 
 Defined as `/assets/<namespace>/bovinesandbuttercups/<path>.json`
 
-```json
+```jsonc
 {
     "type": "bovinesandbuttercups:item",
     "item_model": "example:example_nectar_bowl"
@@ -403,7 +403,7 @@ More information on texture atlases can be found [here](https://minecraft.wiki/w
 <details>
 <summary>assets/minecraft/atlases/block.json</summary>
 
-```json
+```jsonc
 {
     "sources": [
         {
@@ -439,7 +439,7 @@ More information on texture atlases can be found [here](https://minecraft.wiki/w
 <details>
 <summary>assets/bovinesandbuttercups/atlases/flower_crown.json</summary>
 
-```json
+```jsonc
 {
     "sources": [
         {
@@ -476,7 +476,7 @@ More information on texture atlases can be found [here](https://minecraft.wiki/w
 
 <details>
 
-```json
+```jsonc
 {
     // The description text to use in the item tooltip.
     // Will be displayed as <description> x <number>.
