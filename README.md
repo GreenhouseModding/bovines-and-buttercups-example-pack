@@ -385,10 +385,6 @@ Palette textures should be placed in `/assets/<namespace>/textures/bovinesandbut
 
 ### Atlas JSON Examples
 
-The Paletted Permutations system requires modifications to the target texture atlas JSON to work.
-
-If you have worked with armor trims, this system should be familiar, but if not, this will create textures from all palettes defined within the `permutations` key at `<texture_namespace>:<texture_path>_<palette_key>`.
-
 > [!IMPORTANT]
 >
 > ## Good Practice
@@ -396,6 +392,10 @@ If you have worked with armor trims, this system should be familiar, but if not,
 > A good practice with paletted permutations is to prefix your permutation keys with your pack's namespace. This is so your datapack will not clash with any other pack that adds the same key.
 >
 > For example, instead of just `bamboo`, you may want to use the key `bambeautiful_bamboo` instead.
+
+The Paletted Permutations system requires modifications to the target texture atlas JSON to work.
+
+If you have worked with armor trims, this system should be familiar, but if not, this will create textures from all palettes defined within the `permutations` key at `<texture_namespace>:<texture_path>_<palette_key>`.
 
 
 More information on texture atlases can be found [here](https://minecraft.wiki/w/Atlas).
