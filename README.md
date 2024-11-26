@@ -4,8 +4,6 @@
 
 An example resource pack and data pack can be found [in this repository](https://github.com/GreenhouseModding/bovines-and-buttercups-example-pack) under their respective folders.
 
-
-
 ## Table of Contents
 
 - [Cow Types](#cow-types)
