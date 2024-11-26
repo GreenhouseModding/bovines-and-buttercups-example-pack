@@ -490,7 +490,7 @@ More information on texture atlases can be found [here](https://minecraft.wiki/w
     },
     // The textures to use whilst this flower crown is equipped on an entity.
     // Key names are based on where the item was placed in the crafting table.
-    // If you are using the paletted permutation system, this should be `<namespace>:bovinesandbuttercups/flower_crown/models/<key_name>_<path>`.
+    // If you are using the default paletted permutation system, this should be `bovinesandbuttercups:bovinesandbuttercups/flower_crown/models/<key_name>`.
     "equipped_textures": {
         "bottom": "bovinesandbuttercups:bovinesandbuttercups/flower_crown/models/bottom_example_flower_crown_material",
         "bottom_left": "bovinesandbuttercups:bovinesandbuttercups/flower_crown/models/bottom_left_example_flower_crown_material",
@@ -503,7 +503,7 @@ More information on texture atlases can be found [here](https://minecraft.wiki/w
     },
     // The textures to use for this flower crown as an item..
     // Key names are based on where the item was placed in the crafting table.
-    // If you are using the paletted permutation system, this should be `<namespace>:bovinesandbuttercups/flower_crown/items/<key_name>_<path>`.
+    // If you are using the default paletted permutation system, this should be `bovinesandbuttercups:bovinesandbuttercups/flower_crown/items/<key_name>`.
     // Bottom Left, Bottom and Bottom Right are unused in the base mod, but are there for the sake of resource packs that modify the flower crown item textures.
     "item_textures": {
         "bottom": "bovinesandbuttercups:bovinesandbuttercups/flower_crown/items/bottom_example_flower_crown_material",
