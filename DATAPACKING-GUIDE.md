@@ -377,7 +377,7 @@ Palette textures should be placed in `/assets/<namespace>/textures/bovinesandbut
 ### Base Palette
 ![Base Palette](img/flower_crown_palette.png)
 
-[Original Size](https://raw.githubusercontent.com/GreenhouseModding/bovines-and-buttercups/6e4a616310459a30eb739632fed4c10dc2405405/common/src/main/resources/assets/bovinesandbuttercups/textures/bovinesandbuttercups/flower_crown/color_palettes/flower_crown_palette.png)
+[Original Size](https://github.com/GreenhouseModding/bovines-and-buttercups/blob/1.21/common/src/main/resources/assets/bovinesandbuttercups/textures/bovinesandbuttercups/flower_crown/color_palettes/flower_crown_palette.png)
 
 ### Atlas JSON Examples
 
