@@ -372,7 +372,7 @@ Palette textures should be placed in `/assets/<namespace>/textures/bovinesandbut
 
 ![Base Palette](img/bamboo_leaf_palette.png)
 
-[Original Size](bovines-example-resourcepack/assets/example/textures/bovinesandbuttercups/flower_crown/color_palettes/bamboo_leaf.png)
+[Original Size](bovines-example-resourcepack/assets/example/textures/bovinesandbuttercups/flower_crown/color_palettes/example_flower_crown_material.png)
 
 ### Base Palette
 ![Base Palette](img/flower_crown_palette.png)
