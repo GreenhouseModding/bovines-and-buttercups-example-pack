@@ -2,13 +2,17 @@
 
 ## Examples
 
-An example resource pack and data pack can be found [in this repository](https://github.com/GreenhouseModding/bovines-and-buttercups-example-pack) under their respective folders.
+An example resource pack and data pack can be found in [this repository](https://github.com/GreenhouseModding/bovines-and-buttercups-example-pack) under their respective folders.
 
 ## Table of Contents
 
 - [Cow Types](#cow-types)
 - [Nectar](#nectar)
 - [Flower Crown Material](#flower-crown-material)
+- [Custom Flower Type](#custom-flower-type)
+- [Custom Mushroom Type](#custom-mushroom-type)
+- [Cupcake](#cupcake)
+- [Usage In Recipes](#usage-in-recipes)
 
 ## Cow Types
 
@@ -18,7 +22,7 @@ The data has different fields depending on the `"type"` field. With just Bovines
 
 Cow Types are defined in the `/data/<namespace>/bovinesandbuttercups/cow_type` directory in your datapacks.
 
-### Examples
+### Data Examples
 
 <details>
 <summary>bovinesandbuttercups:moobloom</summary>
@@ -193,7 +197,7 @@ Cow Types are defined in the `/data/<namespace>/bovinesandbuttercups/cow_type` d
         // You may read the mushroom type section to get more information on this.
         "custom_mushroom": "example:truffle"
     },
-    // Whether the mooshroom can eat flowers.
+    // Whether the mooshroom can eat flowers. Accepts true or false.
     // This field is optional, will fall back to vanilla/other mod behavior if not set.
     "can_eat_flowers": true,
     // The vanilla type that this mooshroom type represents. Used for backwards compatibility.
@@ -387,7 +391,7 @@ Palette textures should be placed in `/assets/<namespace>/textures/bovinesandbut
 
 > [!IMPORTANT]
 >
-> ## Good Practice
+> **Good Practice**
 >
 > A good practice with paletted permutations is to prefix your permutation keys with your pack's namespace. This is so your datapack will not clash with any other pack that adds the same key.
 >
@@ -523,3 +527,446 @@ More information on texture atlases can be found [here](https://minecraft.wiki/w
 ### Tags
 
 `bovinesandbuttercups:creative_menu_order` - Defines the order in which a flower crown made of 8 of these materials will appear in the creative menu alongside other flower crowns. Should never be replaced unless you know what you are doing.
+
+## Custom Flower Type
+
+Custom Flower Types are data that can be used to add new custom flower types to the game.
+
+These operate off of the `bovinesandbuttercups:custom_flower` item, block and block entity, as well as the `bovinesandbuttercups:potted_custom_flower` block and block entity if allowed to.
+
+### Data Example
+
+<details>
+
+```jsonc
+{
+    // Whether this flower has a potted variant and can be potted. Accepts true or false.
+    // Requires an extra model set that uses the `bovinesandbuttercups:potted_flower` type when true.
+    "has_potted": true,
+    // The effects for a valid mooshroom to give suspicious stew of when feeding this custom flower in item form to a mooshroom.
+    "stew_effects": [
+        {
+            "id": "minecraft:fire_resistance",
+            "duration": 80
+        },
+        {
+            "id": "minecraft:water_breathing",
+            "duration": 160
+        }
+    ]
+}
+```
+
+</details>
+
+### Flower Model Set Example
+
+<details>
+
+```jsonc
+{
+    "type": "bovinesandbuttercups:flower",
+    // Is the same format as block state JSON.
+    // https://minecraft.wiki/w/Tutorial:Models#Block_states
+    "variants": {
+        "": {
+            "model": "example:block/example_flower"
+        }
+    },
+    "item_model": "example:example_flower"
+}
+```
+
+</details>
+
+### Potted Flower Model Set Example
+
+<details>
+
+```jsonc
+{
+    "type": "bovinesandbuttercups:potted_flower",
+    // Is the same format as block state JSON.
+    // https://minecraft.wiki/w/Tutorial:Models#Block_states
+    "variants": {
+        "": {
+            "model": "example:block/example_flower"
+        }
+    },
+    "item_model": "example:example_flower"
+}
+```
+
+</details>
+
+## Custom Mushroom Type
+
+Custom Mushroom Types are data that can be used to add new custom mushroom types to the game.
+
+These operate off of the `bovinesandbuttercups:custom_mushroom` item, block and block entity, as well as the `bovinesandbuttercups:potted_custom_mushroom` and `bovinesandbuttercups:custom_mushroom_block` blocks and block entities if individually allowed to.
+
+### Data Example
+
+<details>
+<summary>Custom Mushroom JSON</summary>
+
+```jsonc
+{
+    // Whether this mushroom has a full block variant. Accepts true or false.
+    // Requires an extra model set that uses the `bovinesandbuttercups:mushroom_block` type when true.
+    "has_potted": true,
+    // Whether this mushroom has a potted variant and can be potted. Accepts true or false.
+    // Requires an extra model set that uses the `bovinesandbuttercups:potted_mushroom` type when true.
+    "has_potted": true,
+    // A template pool (defined in data/<namespace>/worldgen/template_pool/<path>.json) to set blocks to after using bone meal on your mushroom when it's on Mycelium.
+    // https://minecraft.wiki/w/Template_pool
+    "huge_mushroom_template_pool": "example:example_mushroom",
+    // Whether the huge mushroom template pool should be randomly rotated. Typically used for when mushroom template pools are not symmetrical.
+    "randomly_rotate_huge_mushroom": true
+}
+```
+
+</details>
+
+### Mushroom Model Set Example
+
+<details>
+<summary>Mushroom Bovines Model Set</summary>
+
+```jsonc
+{
+    "type": "bovinesandbuttercups:mushroom",
+    // Is the same format as block state JSON.
+    // https://minecraft.wiki/w/Tutorial:Models#Block_states
+    "variants": {
+        "": {
+            "model": "example:block/example_flower"
+        }
+    },
+    "item_model": "example:example_flower"
+}
+```
+
+</details>
+
+### Potted Mushroom Model Set Example
+
+<details>
+
+```jsonc
+{
+    "type": "bovinesandbuttercups:potted_mushroom",
+    // Is the same format as block state JSON.
+    // https://minecraft.wiki/w/Tutorial:Models#Block_states
+    "variants": {
+        "": {
+            "model": "example:block/example_flower"
+        }
+    },
+    "item_model": "example:example_flower"
+}
+```
+
+</details>
+
+### Mushroom Block Model Set Example
+
+<details>
+
+```jsonc
+{
+    "type": "bovinesandbuttercups:mushroom_block",
+    // Is the same format as block state JSON.
+    // https://minecraft.wiki/w/Tutorial:Models#Block_states
+    // This multipart is set up in like the vanilla mushroom blocks, with the unique texture when a face is true, and the inside texture when a face is false.
+    "multipart": [
+        {
+            "apply": {
+                "model": "example:block/example_mushroom_block"
+            },
+            "when": {
+                "north": "true"
+            }
+        },
+        {
+        "apply": {
+            "model": "example:block/example_mushroom_block",
+            "uvlock": true,
+            "y": 90
+        },
+        "when": {
+            "east": "true"
+        }
+        },
+        {
+        "apply": {
+            "model": "example:block/example_mushroom_block",
+            "uvlock": true,
+            "y": 180
+        },
+        "when": {
+            "south": "true"
+        }
+        },
+        {
+        "apply": {
+            "model": "example:block/example_mushroom_block",
+            "uvlock": true,
+            "y": 270
+        },
+        "when": {
+            "west": "true"
+        }
+        },
+        {
+        "apply": {
+            "model": "example:block/example_mushroom_block",
+            "uvlock": true,
+            "x": 270
+        },
+        "when": {
+            "up": "true"
+        }
+        },
+        {
+        "apply": {
+            "model": "example:block/example_mushroom_block",
+            "uvlock": true,
+            "x": 90
+        },
+        "when": {
+            "down": "true"
+        }
+        },
+        {
+        "apply": {
+            "model": "minecraft:block/mushroom_block_inside"
+        },
+        "when": {
+            "north": "false"
+        }
+        },
+        {
+        "apply": {
+            "model": "minecraft:block/mushroom_block_inside",
+            "uvlock": false,
+            "y": 90
+        },
+        "when": {
+            "east": "false"
+        }
+        },
+        {
+            "apply": {
+                "model": "minecraft:block/mushroom_block_inside",
+                "uvlock": false,
+                "y": 180
+            },
+            "when": {
+                "south": "false"
+            }
+        },
+        {
+            "apply": {
+                "model": "minecraft:block/mushroom_block_inside",
+                "uvlock": false,
+                "y": 270
+            },
+            "when": {
+                "west": "false"
+            }
+        },
+        {
+            "apply": {
+                "model": "minecraft:block/mushroom_block_inside",
+                "uvlock": false,
+                "x": 270
+            },
+            "when": {
+                "up": "false"
+            }
+        },
+        {
+            "apply": {
+                "model": "minecraft:block/mushroom_block_inside",
+                "uvlock": false,
+                "x": 90
+            },
+            "when": {
+                "down": "false"
+            }
+        }
+    ],
+    "item_model": "example:example_mushroom_block"
+}
+```
+
+</details>
+
+## Cupcakes
+
+- TODO
+
+## Usage in Recipes
+
+### Componentized Items
+
+Componentized items may be used in recipes. In order to use your nectar, custom flower and/or custom mushrooms in recipes as an ingredient, you must use your loader's `components` ingredient type.
+
+<details>
+<summary>Nectar Ingredient Example</summary>
+
+If you want to only support a specific loader, you may remove the content between the start and end comments.
+
+```jsonc
+{
+    // Fabric start.
+    "fabric:type": "fabric:components",
+    "base": {
+        "item": "bovinesandbuttercups:nectar_bowl"
+    },
+    // Fabric end.
+    
+    // NeoForge start.
+    "type": "neoforge:components",
+    "items": [
+        "bovinesandbuttercups:nectar_bowl"
+    ],
+    // NeoForge end.
+
+    // The components to check for within this ingredient.
+    // This field is the same on both loaders.
+    "components": {
+        "bovinesandbuttercups:nectar": "example:example_nectar"
+    }
+}
+```
+
+</details>
+
+<details>
+<summary>Custom Flower Ingredient Example</summary>
+
+If you want to only support a specific loader, you may remove the content between the start and end comments.
+
+```jsonc
+{
+    // Fabric start.
+    "fabric:type": "fabric:components",
+    "base": {
+        "item": "bovinesandbuttercups:custom_flower"
+    },
+    // Fabric end.
+    
+    // NeoForge start.
+    "type": "neoforge:components",
+    "items": [
+        "bovinesandbuttercups:custom_flower"
+    ],
+    // NeoForge end.
+
+    // The components to check for within this ingredient.
+    // This field is the same on both loaders.
+    "components": {
+        "bovinesandbuttercups:custom_flower": "example:example_flower"
+    }
+}
+```
+
+</details>
+
+<details>
+<summary>Custom Mushroom Ingredient Example</summary>
+
+If you want to only support a specific loader, you may remove the content between the start and end comments.
+
+```jsonc
+{
+    // Fabric start.
+    "fabric:type": "fabric:components",
+    "base": {
+        "item": "bovinesandbuttercups:custom_mushroom"
+    },
+    // Fabric end.
+    
+    // NeoForge start.
+    "type": "neoforge:components",
+    "items": [
+        "bovinesandbuttercups:custom_mushroom"
+    ],
+    // NeoForge end.
+
+    // The components to check for within this ingredient.
+    // This field is the same on both loaders.
+    "components": {
+        "bovinesandbuttercups:custom_mushroom": "example:example_mushroom"
+    }
+}
+```
+
+</details>
+
+Examples of usage of custom ingredients can be found at the recipes within the [GreenhouseModding/bovines-and-buttercups-example-pack GitHub Repository](https://github.com/GreenhouseModding/bovines-and-buttercups-example-pack). [Light Blue Dye from Example Flower](https://github.com/GreenhouseModding/bovines-and-buttercups-example-pack/blob/1.21.1/bovines-example-datapack/data/example/recipe/light_blue_dye_from_example_flower.json), [Suspicious Stew from Example Flower](https://github.com/GreenhouseModding/bovines-and-buttercups-example-pack/blob/1.21.1/bovines-example-datapack/data/example/recipe/suspicious_stew_from_example_flower.json).
+
+### Remainder Ingredient Type
+
+Bovines and Buttercups adds a `bovinesandbuttercups:remainder` ingredient type. Which will return the player with a specified item after the crafting has been processed within the slot that the item was in.
+
+<details>
+
+```jsonc
+{
+    "fabric:type": "bovinesandbuttercups:remainder",
+    "type": "bovinesandbuttercups:remainder",
+    // The base ingredient to use in the crafting.
+    // This accepts any ingredient, including custom ingredient types.
+    "base": {
+        "item": "minecraft:suspicious_stew"
+    },
+    // The remainder item to return from this ingredient as soon as the crafting has been process.
+    "remainder": {
+        "id": "minecraft:bowl"
+    }
+}
+```
+
+</details>
+
+
+### Crafting Special Suspicious Edible
+
+To craft edible types based on suspicious stew effects found within the suspicious stew within the recipe, you may use the `bovinesandbuttercups:crafting_special_suspicious_edible` recipe type.
+
+<details>
+
+```jsonc
+{
+    "type": "bovinesandbuttercups:crafting_special_suspicious_edible",
+    "group": "",
+    "pattern": {
+        "key": {
+            // The suspicious stew part of the recipe.
+            // With the type specified as `bovinesandbuttercups:crafting_special_suspicious_edible`.
+            "S": {
+                "fabric:type": "bovinesandbuttercups:remainder",
+                "type": "bovinesandbuttercups:remainder",
+                "base": {
+                    "item": "minecraft:suspicious_stew"
+                },
+                "remainder": {
+                    "id": "minecraft:bowl"
+                }
+            },
+            "W": {
+                "item": "minecraft:wheat"
+            }
+        },
+        "pattern": [
+            "WSW"
+        ]
+    },
+    "result": "example:example_suspicious_edible"
+}
+```
+
+</details>
