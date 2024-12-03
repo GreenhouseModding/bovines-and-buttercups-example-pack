@@ -542,8 +542,10 @@ These operate off of the `bovinesandbuttercups:custom_flower` item, block and bl
 {
     // Whether this flower has a potted variant and can be potted. Accepts true or false.
     // Requires an extra model set that uses the `bovinesandbuttercups:potted_flower` type when true.
+    // This field is optional. Defaults to true.
     "has_potted": true,
     // The effects for a valid mooshroom to give suspicious stew of when feeding this custom flower in item form to a mooshroom.
+    // This field is optional.
     "stew_effects": [
         {
             "id": "minecraft:fire_resistance",
@@ -614,14 +616,18 @@ These operate off of the `bovinesandbuttercups:custom_mushroom` item, block and 
 {
     // Whether this mushroom has a full block variant. Accepts true or false.
     // Requires an extra model set that uses the `bovinesandbuttercups:mushroom_block` type when true.
+    // This field is optional. Defaults to true.
     "has_potted": true,
     // Whether this mushroom has a potted variant and can be potted. Accepts true or false.
     // Requires an extra model set that uses the `bovinesandbuttercups:potted_mushroom` type when true.
+    // This field is optional. Defaults to true.
     "has_potted": true,
     // A template pool (defined in data/<namespace>/worldgen/template_pool/<path>.json) to set blocks to after using bone meal on your mushroom when it's on Mycelium.
     // https://minecraft.wiki/w/Template_pool
+    // This field is optional.
     "huge_mushroom_template_pool": "example:example_mushroom",
-    // Whether the huge mushroom template pool should be randomly rotated. Typically used for when mushroom template pools are not symmetrical.
+    // Whether the huge mushroom template pool should be randomly rotated. Typically used for when mushroom template pools are not symmetrical. Accepts true or false.
+    // This field is optional. Defaults to false.
     "randomly_rotate_huge_mushroom": true
 }
 ```
